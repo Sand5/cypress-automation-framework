@@ -1,0 +1,32 @@
+{
+  "name": "cypress-automation-framework",
+  "version": "1.0.0",
+  "description": "Cypress Automation Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "triggerAllTests-headless": "npx cypress run",
+    "triggerAllTests-headed": "npx cypress run --headed",
+    "triggerAllTests-chrome": "npx cypress run --browser chrome",
+    "triggerAllTests-dashboard": "npx cypress run --record --key 0294c806-00ee-48a2-af13-0d17f1cff52c",
+    "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriveruni/*.js",
+    "triggerAllTests-autoTestStore": "npx cypress run --spec cypress/e2e/automation-test-store/*.js",
+    "mergeMochawesomeReports": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
+    "deleteMochawesomeReports": "rm -rf cypress/results/mochawesome/*.json || true",
+    "deleteMochawesomeMergedReport": "rm -rf mochawesome-report || true",
+    "delete-results": "rm -rf cypress/results || true",
+    "regression-pack":"npm run delete-results && npm run deleteMochawesomeMergedReport && npm run triggerAllTests-headless && npm run mergeMochawesomeReports",
+    "triggerAllTests-staging": "npx cypress run --env configFile=staging"
+  },
+  "author": "Sanderson Imbeah",
+  "license": "ISC",
+  "devDependencies": {
+    "@cypress/xpath": "^2.0.3",
+    "cypress": "^13.17.0",
+    "cypress-multi-reporters": "^2.0.5",
+    "mocha-junit-reporter": "^2.2.1",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^5.0.0",
+    "mochawesome-report-generator": "^6.2.0"
+  }
+}

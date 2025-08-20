@@ -1,0 +1,22 @@
+{
+  "reporterEnabled": "spec, cypress-multi-reporters",
+  "mochaJunitReporterReporterOptions": {
+    "mochaFile": "cypress/results/junit/results-[hash].xml"
+  },
+
+  "reporterOptions": {
+ "reporterEnabled": "mochawesome",
+    "mochawesomeReporterOptions": {
+      "reportDir": "cypress/results/mochawesome",
+      "reportTitle": "Cypress Test Results",
+      "quiet": true,
+      "overwrite": true,
+      "html": false,
+      "embeddedScreenshots": true,
+      "json": true,
+      "reportFilename": "[status]_[datetime]-[name]-report",
+      "timestamp": "dd/mm/yyyy_HHMMss"
+  
+    }
+  }
+}

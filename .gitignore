@@ -10,7 +10,13 @@ node_modules/
 # Ignore system files
 .DS_Store
 Thumbs.db
+package-lock.json
 
-# Ignore environment files
+# Cypress test results
+cypress/videos/
+cypress/screenshots/
 results/
 mochawesome-report/
+
+# Cypress cache
+.cypress_cache/
