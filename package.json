@@ -11,6 +11,7 @@
     "triggerAllTests-dashboard": "npx cypress run --record --key 0294c806-00ee-48a2-af13-0d17f1cff52c",
     "triggerAllTests-webdriveruni": "npx cypress run --spec cypress/e2e/webdriveruni/*.js",
     "triggerAllTests-autoTestStore": "npx cypress run --spec cypress/e2e/automation-test-store/*.js",
+    "triggerAllTests-autoTestStore-dashboard": "npx cypress run --spec cypress/e2e/automation-test-store/*.js --record --key 0294c806-00ee-48a2-af13-0d17f1cff52c",
     "mergeMochawesomeReports": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
     "deleteMochawesomeReports": "rm -rf cypress/results/mochawesome/*.json || true",
     "deleteMochawesomeMergedReport": "rm -rf mochawesome-report || true",
