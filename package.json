@@ -16,7 +16,8 @@
     "deleteMochawesomeMergedReport": "rm -rf mochawesome-report || true",
     "delete-results": "rm -rf cypress/results || true",
     "regression-pack":"npm run delete-results && npm run deleteMochawesomeMergedReport && npm run triggerAllTests-headless && npm run mergeMochawesomeReports",
-    "triggerAllTests-staging": "npx cypress run --env configFile=staging"
+    "triggerAllTests-staging": "npx cypress run --env configFile=staging",
+    "cypress-multi-browser": "npm run triggerAllTests-autoTestStore -- --browser electron --headed & npm run triggerAllTests-autoTestStore -- --browser chrome --headed"
   },
   "author": "Sanderson Imbeah",
   "license": "ISC",
