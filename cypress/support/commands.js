@@ -24,7 +24,6 @@ Cypress.Commands.add("navigateToWebdriverUniHomePage", () => {
   cy.visit("/");
 });
 
-
 Cypress.Commands.add("selectProduct", (productName) => {
   cy.get(".fixed_wrapper .prdocutname").each(($el, index, $list) => {
     if ($el.text().includes(productName)) {
@@ -37,7 +36,7 @@ Cypress.Commands.add("addProductToBasket", (productName) => {
   cy.get(".fixed_wrapper .prdocutname").each(($el, index, $list) => {
     if ($el.text() === productName) {
       cy.log("Adding product to basket: " + $el.text());
-      cy.get(".fa-cart-plus").eq(index).click({force: true});
+      cy.get(".fa-cart-plus").eq(index).click({ force: true });
     }
   });
 });
@@ -51,7 +50,7 @@ Cypress.Commands.add(
     cy.get("textarea[name='message']").type(comment);
     cy.get("input[value='SUBMIT']").click();
     cy.get($selector).contains(textToLocate);
-  }
+  },
 );
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })

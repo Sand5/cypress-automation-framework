@@ -31,7 +31,7 @@ describe("Test mouse actions", () => {
     cy.get("#double-click").dblclick();
   });
 
-  it.only("I should be able to hold the left mouse click button a given element", () => {
+  it("I should be able to hold the left mouse click button a given element", () => {
     cy.visit("http://webdriveruniversity.com");
     cy.get("#actions")
       .scrollIntoView()
@@ -41,7 +41,6 @@ describe("Test mouse actions", () => {
       .trigger("mousedown", { which: 1 })
       .then(($element) => {
         expect($element).to.have.css("background-color", "rgb(0, 255, 0)");
-
       });
   });
 });

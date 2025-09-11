@@ -6,7 +6,7 @@ import AutoStore_HairCare_PO from "../../support/pageObjects/automation-test-sto
 const autoStoreHomePage = new AutoStore_Homepage_PO();
 const autoStoreHairCarePage = new AutoStore_HairCare_PO();
 
-describe.skip("Add multiple items to the basket", () => {
+describe("Add multiple items to the basket", () => {
   before(() => {
     cy.log("Runs once before all tests in the block");
     cy.fixture("products").then((data) => {
@@ -22,4 +22,3 @@ describe.skip("Add multiple items to the basket", () => {
     autoStoreHairCarePage.addHairCareProductToBasket();
   });
 });
-

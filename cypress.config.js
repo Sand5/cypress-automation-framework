@@ -7,7 +7,7 @@ function getConfigurationByFile(file) {
 
   if (!fs.existsSync(pathToConfigFile) === false) {
     console.log(
-      `The configuration file ${file}.json does not exist at path: ${pathToConfigFile}`
+      `The configuration file ${file}.json does not exist at path: ${pathToConfigFile}`,
     );
   }
 

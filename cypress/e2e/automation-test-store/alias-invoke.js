@@ -21,7 +21,7 @@ describe("Alias and invoke", () => {
     cy.get("@productTitle").should("include", "Add to Cart");
   });
 
-  it.only("Calculate total of sale products", () => {
+  it("Calculate total of sale products", () => {
     cy.visit("https://www.automationteststore.com/");
     cy.get(".thumbnail").as("totalThumbnails");
     // cy.get("@totalThumbnails").find('.oneprice').each(($el, index, $list) => {
@@ -61,4 +61,3 @@ describe("Alias and invoke", () => {
       });
   });
 });
-     

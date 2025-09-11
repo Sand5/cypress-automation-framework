@@ -15,9 +15,13 @@
     "deleteMochawesomeReports": "rm -rf cypress/results/mochawesome/*.json || true",
     "deleteMochawesomeMergedReport": "rm -rf mochawesome-report || true",
     "delete-results": "rm -rf cypress/results || true",
-    "regression-pack":"npm run delete-results && npm run deleteMochawesomeMergedReport && npm run triggerAllTests-headless && npm run mergeMochawesomeReports",
+    "regression-pack": "npm run delete-results && npm run deleteMochawesomeMergedReport && npm run triggerAllTests-headless && npm run mergeMochawesomeReports",
     "triggerAllTests-staging": "npx cypress run --env configFile=staging",
     "cypress-multi-browser": "npm run triggerAllTests-autoTestStore -- --browser electron --headed & npm run triggerAllTests-autoTestStore -- --browser chrome --headed"
+  },
+  "prettier": {
+    "singleQuote": false,
+    "endOfLine": "lf"
   },
   "author": "Sanderson Imbeah",
   "license": "ISC",
@@ -25,9 +29,14 @@
     "@cypress/xpath": "^2.0.3",
     "cypress": "^13.17.0",
     "cypress-multi-reporters": "^2.0.5",
+    "eslint": "^9.35.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-cypress": "^5.1.1",
+    "eslint-plugin-prettier": "^5.5.4",
     "mocha-junit-reporter": "^2.2.1",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^5.0.0",
-    "mochawesome-report-generator": "^6.2.0"
+    "mochawesome-report-generator": "^6.2.0",
+    "prettier": "^3.6.2"
   }
 }

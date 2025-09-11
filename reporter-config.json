@@ -5,7 +5,7 @@
   },
 
   "reporterOptions": {
- "reporterEnabled": "mochawesome",
+    "reporterEnabled": "mochawesome",
     "mochawesomeReporterOptions": {
       "reportDir": "cypress/results/mochawesome",
       "reportTitle": "Cypress Test Results",
@@ -16,7 +16,6 @@
       "json": true,
       "reportFilename": "[status]_[datetime]-[name]-report",
       "timestamp": "dd/mm/yyyy_HHMMss"
-  
     }
   }
 }

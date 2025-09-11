@@ -2,15 +2,12 @@
 describe("Verifying variables, cypress commands and jquery commands", () => {
   it("Navigating to specific product pages", () => {
     cy.visit("https://www.automationteststore.com/");
-    const makeupLink = cy
-      .get("a[href*='product/category&path=']")
-      .contains("Makeup");
-    const skincareLink = cy
-      .get("a[href*='product/category&path=']")
-      .contains("Skincare");
-    makeupLink.click();
-    skincareLink.click();
+    cy.get("a[href*='product/category&path=']").contains("Makeup").click();
+    cy.get("a[href*='product/category&path=']").contains("Skincare").click();
+    //makeupLink.click();
+    // skincareLink.click();
   });
+
   it("Navigating to specific product pages", () => {
     cy.visit("https://www.automationteststore.com/");
     cy.get("a[href*='product/category&path=']").contains("Makeup").click();
@@ -21,7 +18,7 @@ describe("Verifying variables, cypress commands and jquery commands", () => {
     });
   });
 
-  it.only("Validate properties of the Contact Us Page", () => {
+  it("Validate properties of the Contact Us Page", () => {
     cy.visit("https://automationteststore.com/index.php?rt=content/contact");
     //Uses cypress commands and chaining
     cy.contains("#ContactUsFrm", "Contact Us Form")

@@ -16,14 +16,14 @@ describe("Test Contact Us Form via WebdriverUni", () => {
     });
   });
 
-  it.only("Should be able to submit a successful submission via contact us form", () => {
+  it("Should be able to submit a successful submission via contact us form", () => {
     contactUsPage.contactFormSubmission(
       Cypress.env("first_name"),
       data.last_name,
       data.email,
       "Hello, this is a test message.",
       "h1",
-      "Thank You for your Message!"
+      "Thank You for your Message!",
     );
   });
 
@@ -34,7 +34,7 @@ describe("Test Contact Us Form via WebdriverUni", () => {
       "invalid-email",
       "Hello, this is a test message.",
       "body",
-      "Error: Invalid email address"
+      "Error: Invalid email address",
     );
   });
 });

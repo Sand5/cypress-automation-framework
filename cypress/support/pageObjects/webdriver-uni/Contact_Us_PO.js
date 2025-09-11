@@ -5,7 +5,7 @@ class Contact_Us_PO {
     email,
     comment,
     $selector,
-    textToLocate
+    textToLocate,
   ) {
     cy.get("input[name='first_name']").type(firstName);
     cy.get("input[name='last_name']").type(lastName);

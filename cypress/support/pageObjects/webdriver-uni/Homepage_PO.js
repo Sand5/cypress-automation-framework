@@ -1,6 +1,6 @@
 class HomePage_PO {
   visitHomePage() {
-    cy.visit(Cypress.env("webdriverUni_homepage"), {timeout:60000});
+    cy.visit(Cypress.env("webdriverUni_homepage"), { timeout: 60000 });
   }
 
   clickOnContactUsButton() {

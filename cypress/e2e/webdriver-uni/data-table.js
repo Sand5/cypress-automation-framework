@@ -20,7 +20,7 @@ describe("Handling data via webdriver uni", () => {
       });
   });
 
-  it.only("Calculate and assert the age of specific users", () => {
+  it("Calculate and assert the age of specific users", () => {
     cy.get("#thumbnail-1 tr td:nth-child(2)").each(($el, index, $list) => {
       const surname = $el.text();
       if (surname.includes("Woods")) {

@@ -9,31 +9,30 @@ describe("Interact with dropdown list via webdriver uni", () => {
 
     cy.get("#myInput").type("A");
 
-    cy.get("#myInputautocomplete-list *")
-      .each(($el, index, $list) => {
-        const productText = $el.text();
-        const productToSelect = "Avocado";
+    cy.get("#myInputautocomplete-list *").each(($el, index, $list) => {
+      const productText = $el.text();
+      const productToSelect = "Avocado";
 
-        if (productText === productToSelect) {
-          cy.wrap($el).click();
+      if (productText === productToSelect) {
+        cy.wrap($el).click();
 
-          cy.get("#submit-button").click();
-          cy.url().should("include", productToSelect);
-        }
-      })
-      // .then(() => {
-      //   cy.get("#myInput").type("G");
+        cy.get("#submit-button").click();
+        cy.url().should("include", productToSelect);
+      }
+    });
+    // .then(() => {
+    //   cy.get("#myInput").type("G");
 
-      //   cy.get("#myInputautocomplete-list *").each(($el, index, $list) => {
-      //     const productText = $el.text();
-      //     const productToSelect = "Grapes";
+    //   cy.get("#myInputautocomplete-list *").each(($el, index, $list) => {
+    //     const productText = $el.text();
+    //     const productToSelect = "Grapes";
 
-      //     if (productText === productToSelect) {
-      //       cy.wrap($el).click();
-      //       cy.get("#submit-button").click();
-      //       cy.url().should("include", productToSelect);
-      //     }
-      //   });
-      // });
+    //     if (productText === productToSelect) {
+    //       cy.wrap($el).click();
+    //       cy.get("#submit-button").click();
+    //       cy.url().should("include", productToSelect);
+    //     }
+    //   });
+    // });
   });
 });

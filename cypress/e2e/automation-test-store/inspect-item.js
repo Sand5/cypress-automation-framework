@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 describe("Inspect Automation Test Store Items using chain of commands", () => {
-  it.only("Click on the first item using item text", () => {
+  it("Click on the first item using item text", () => {
     cy.visit("https://www.automationteststore.com/");
     cy.get(".prdocutname")
       .contains("Skinsheen Bronzer Stick")

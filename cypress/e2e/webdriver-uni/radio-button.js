@@ -14,7 +14,7 @@ describe("Verify radio buttons via webdriver uni", () => {
     cy.get("#radio-buttons").find('[type="radio"]').eq(1).check();
   });
 
-  it.only("Validate the states of specific radio buttons", () => {
+  it("Validate the states of specific radio buttons", () => {
     cy.get("[value ='lettuce']").should("not.be.checked");
     cy.get("[value ='pumpkin']").should("be.checked");
 
